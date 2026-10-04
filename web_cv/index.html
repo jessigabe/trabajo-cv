@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hoja de vida académica de Jessica Cuasquen">
+  <title>Jessica Cuasquen | Hoja de Vida</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="identity">
+      <div class="monogram" aria-hidden="true">JC</div>
+      <div>
+        <p class="kicker">Hoja de vida digital</p>
+        <h1>Jessica Cuasquen</h1>
+        <p class="subtitle">Estudiante de Computación · UPEC</p>
+      </div>
+    </div>
+    <nav class="quick-nav" aria-label="Navegación principal">
+      <a href="#perfil">Perfil</a>
+      <a href="#trayectoria">Trayectoria</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main class="layout">
+    <aside class="summary-card">
+      <h2>Resumen</h2>
+      <p>Formación en Computación con participación en proyectos académicos de diseño, validación de datos, documentación y pruebas funcionales.</p>
+      <div class="mini-stat"><span>Área</span><strong>Computación</strong></div>
+      <div class="mini-stat"><span>Universidad</span><strong>UPEC</strong></div>
+      <div class="mini-stat"><span>Enfoque</span><strong>Diseño y calidad</strong></div>
+    </aside>
+
+    <div class="content">
+      <section class="panel" id="perfil">
+        <div class="section-title">
+          <span>01</span>
+          <h2>Perfil</h2>
+        </div>
+        <p>Soy estudiante de Computación interesada en el diseño de interfaces, la organización de información, la documentación técnica y las pruebas de aplicaciones. Busco fortalecer mis conocimientos mediante proyectos prácticos y trabajo colaborativo.</p>
+      </section>
+
+      <section class="panel" id="trayectoria">
+        <div class="section-title">
+          <span>02</span>
+          <h2>Trayectoria académica y proyectos</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="dot"></div>
+            <div>
+              <p class="label">Formación</p>
+              <h3>Universidad Politécnica Estatal del Carchi</h3>
+              <p>Carrera de Computación. Desarrollo de actividades prácticas relacionadas con aplicaciones móviles, redes, visión por computadora y documentación técnica.</p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="dot"></div>
+            <div>
+              <p class="label">Proyecto</p>
+              <h3>Cercly</h3>
+              <p>Participación en diseño, recopilación y validación de información, pruebas funcionales, evidencias y apoyo documental para una aplicación móvil de recomendaciones cercanas.</p>
+              <button class="details-toggle" data-target="cercly-extra" aria-expanded="false">Ver responsabilidades</button>
+              <div class="details" id="cercly-extra">
+                <ul>
+                  <li>Apoyo en diseño y organización de interfaces.</li>
+                  <li>Validación de datos y contenido.</li>
+                  <li>Pruebas funcionales y recopilación de evidencias.</li>
+                  <li>Documentación del proyecto.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" id="habilidades">
+        <div class="section-title">
+          <span>03</span>
+          <h2>Habilidades</h2>
+        </div>
+        <div class="skill-filters" role="group" aria-label="Filtros de habilidades">
+          <button class="filter active" data-filter="all">Todas</button>
+          <button class="filter" data-filter="design">Diseño</button>
+          <button class="filter" data-filter="quality">Calidad</button>
+          <button class="filter" data-filter="web">Web</button>
+        </div>
+        <div class="skills">
+          <article class="skill-card" data-category="design"><h3>Diseño de interfaces</h3><p>Organización visual y prototipado de pantallas.</p></article>
+          <article class="skill-card" data-category="quality"><h3>Pruebas funcionales</h3><p>Revisión del comportamiento de funcionalidades y registro de evidencias.</p></article>
+          <article class="skill-card" data-category="quality"><h3>Validación de datos</h3><p>Revisión y organización de información para proyectos.</p></article>
+          <article class="skill-card" data-category="web"><h3>HTML5 y CSS3</h3><p>Maquetación responsiva de contenido web.</p></article>
+          <article class="skill-card" data-category="web"><h3>JavaScript</h3><p>Interacciones básicas para interfaces web.</p></article>
+          <article class="skill-card" data-category="design"><h3>Documentación</h3><p>Preparación de informes, evidencias y material de apoyo.</p></article>
+        </div>
+      </section>
+
+      <section class="panel" id="contacto">
+        <div class="section-title">
+          <span>04</span>
+          <h2>Contacto</h2>
+        </div>
+        <p>Perfil académico disponible en GitHub:</p>
+        <p><a class="github-link" href="https://github.com/jessigabe">github.com/jessigabe</a></p>
+
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <label>Nombre
+              <input type="text" id="name" required minlength="2">
+            </label>
+            <label>Correo
+              <input type="email" id="email" required>
+            </label>
+          </div>
+          <label>Mensaje
+            <textarea id="message" rows="4" required minlength="10"></textarea>
+          </label>
+          <button class="send-btn" type="submit">Validar formulario</button>
+          <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>Jessica Cuasquen · Desarrollo de Aplicaciones Móviles · 2026</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
